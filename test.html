@@ -1,7 +1,7 @@
 <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/dbhurt/Cultivate/55a16d4c/quiz.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
-<script src="https://cdn.rawgit.com/dbhurt/Cultivate/55a16d4c/disc.js"></script>
+<script src="https://rawgit.com/dbhurt/Cultivate/master/disc.js"></script>
 <script type="text/javascript">
 jQuery(document).ready(function($)
 {
@@ -10,10 +10,7 @@ ko.applyBindings(window.myViewModel);
 });
 </script>
 
-<div>D:<span data-bind="text:dResult"></span></div><br>
-<div>I:<span data-bind="text:iResult"></span></div><br>
-<div>S:<span data-bind="text:sResult"></span></div><br>
-<div>C:<span data-bind="text:cResult"></span></div>
+<span class="discGroup">D:<span data-bind="text:dResult"></span></span><span class="discGroup">I:<span data-bind="text:iResult"></span></span><span class="discGroup">S:<span data-bind="text:sResult"></span></span><span class="discGroup">C:<span data-bind="text:cResult"></span></span>
 <hr>
 <span>I am assertive, demanding, and decisive.</span>
 <ul>
