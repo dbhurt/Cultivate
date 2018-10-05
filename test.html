@@ -1,0 +1,281 @@
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+<script type="text/javascript">
+var TestViewModel = function(){
+	var _self = this;
+	_self.question1 = ko.observable(0);
+	_self.question2 = ko.observable(0);
+	_self.question3 = ko.observable(0);
+	_self.question4 = ko.observable(0);
+	_self.question5 = ko.observable(0);
+
+	_self.question6 = ko.observable(0);
+	_self.question7 = ko.observable(0);
+	_self.question8 = ko.observable(0);
+	_self.question9 = ko.observable(0);
+	_self.question10 = ko.observable(0);
+
+	_self.question11 = ko.observable(0);
+	_self.question12 = ko.observable(0);
+	_self.question13 = ko.observable(0);
+	_self.question14 = ko.observable(0);
+	_self.question15 = ko.observable(0);
+
+	_self.question16 = ko.observable(0);
+	_self.question17 = ko.observable(0);
+	_self.question18 = ko.observable(0);
+	_self.question19 = ko.observable(0);
+	_self.question20 = ko.observable(0);
+
+	_self.dResult = ko.pureComputed(function() {
+		return Number(_self.question1()) +
+			Number(_self.question2()) +
+			Number(_self.question3()) +
+			Number(_self.question4()) +
+			Number(_self.question5());
+	}, this);
+
+	_self.iResult = ko.pureComputed(function() {
+		return Number(_self.question6()) +
+			Number(_self.question7()) +
+			Number(_self.question8()) +
+			Number(_self.question9()) +
+			Number(_self.question10());
+	}, this);
+
+	_self.sResult = ko.pureComputed(function() {
+		return Number(_self.question11()) +
+			Number(_self.question12()) +
+			Number(_self.question13()) +
+			Number(_self.question14()) +
+			Number(_self.question15());
+	}, this);
+
+	_self.cResult = ko.pureComputed(function() {
+		return Number(_self.question16()) +
+			Number(_self.question17()) +
+			Number(_self.question18()) +
+			Number(_self.question19()) +
+			Number(_self.question20());
+	}, this);
+};
+</script>
+<script type="text/javascript">
+jQuery(document).ready(function($)
+{
+window.myViewModel = new TestViewModel();
+ko.applyBindings(window.myViewModel);
+});
+</script>
+
+<div>D:<span data-bind="text:dResult"></span></div><br>
+<div>I:<span data-bind="text:iResult"></span></div><br>
+<div>S:<span data-bind="text:sResult"></span></div><br>
+<div>C:<span data-bind="text:cResult"></span></div>
+<hr>
+<span>I am assertive, demanding, and decisive.</span>
+<ul>
+<li><input type="radio" name="question1" value="1" data-bind="checked:question1" />1</li>
+<li><input type="radio" name="question1" value="2" data-bind="checked:question1" />2</li>
+<li><input type="radio" name="question1" value="3" data-bind="checked:question1" />3</li>
+<li><input type="radio" name="question1" value="4" data-bind="checked:question1" />4</li>
+<li><input type="radio" name="question1" value="5" data-bind="checked:question1" />5</li>
+</ul>
+<br>
+<span>I enjoy doing multiple tasks at once.</span>
+<ul>
+<li><input type="radio" name="question2" value="1" data-bind="checked:question2" />1</li>
+<li><input type="radio" name="question2" value="2" data-bind="checked:question2" />2</li>
+<li><input type="radio" name="question2" value="3" data-bind="checked:question2" />3</li>
+<li><input type="radio" name="question2" value="4" data-bind="checked:question2" />4</li>
+<li><input type="radio" name="question2" value="5" data-bind="checked:question2" />5</li>
+</ul>
+<br>
+<span>I thrive in a challenge-based environment.</span>
+<ul>
+<li><input type="radio" name="question3" value="1" data-bind="checked:question3" />1</li>
+<li><input type="radio" name="question3" value="2" data-bind="checked:question3" />2</li>
+<li><input type="radio" name="question3" value="3" data-bind="checked:question3" />3</li>
+<li><input type="radio" name="question3" value="4" data-bind="checked:question3" />4</li>
+<li><input type="radio" name="question3" value="5" data-bind="checked:question3" />5</li>
+</ul>
+<br>
+<span>I think about tasks above others or myself. </span>
+<ul>
+<li><input type="radio" name="question4" value="1" data-bind="checked:question4" />1</li>
+<li><input type="radio" name="question4" value="2" data-bind="checked:question4" />2</li>
+<li><input type="radio" name="question4" value="3" data-bind="checked:question4" />3</li>
+<li><input type="radio" name="question4" value="4" data-bind="checked:question4" />4</li>
+<li><input type="radio" name="question4" value="5" data-bind="checked:question4" />5</li>
+</ul>
+<br>
+<span>I am motivated by accomplishment and authority.</span>
+<ul>
+<li><input type="radio" name="question5" value="1" data-bind="checked:question5" />1</li>
+<li><input type="radio" name="question5" value="2" data-bind="checked:question5" />2</li>
+<li><input type="radio" name="question5" value="3" data-bind="checked:question5" />3</li>
+<li><input type="radio" name="question5" value="4" data-bind="checked:question5" />4</li>
+<li><input type="radio" name="question5" value="5" data-bind="checked:question5" />5</li>
+</ul>
+<hr>
+
+<br>
+<span>I enjoy influencing and inspiring people.</span>
+<ul>
+<li><input type="radio" name="question6" value="1" data-bind="checked:question6" />1</li>
+<li><input type="radio" name="question6" value="2" data-bind="checked:question6" />2</li>
+<li><input type="radio" name="question6" value="3" data-bind="checked:question6" />3</li>
+<li><input type="radio" name="question6" value="4" data-bind="checked:question6" />4</li>
+<li><input type="radio" name="question6" value="5" data-bind="checked:question6" />5</li>
+</ul>
+<br>
+<span>I am optimistic about others.</span>
+<ul>
+<li><input type="radio" name="question7" value="1" data-bind="checked:question7" />1</li>
+<li><input type="radio" name="question7" value="2" data-bind="checked:question7" />2</li>
+<li><input type="radio" name="question7" value="3" data-bind="checked:question7" />3</li>
+<li><input type="radio" name="question7" value="4" data-bind="checked:question7" />4</li>
+<li><input type="radio" name="question7" value="5" data-bind="checked:question7" />5</li>
+</ul>
+<br>
+<span>I tend to be the life of the party.</span>
+<ul>
+<li><input type="radio" name="question8" value="1" data-bind="checked:question8" />1</li>
+<li><input type="radio" name="question8" value="2" data-bind="checked:question8" />2</li>
+<li><input type="radio" name="question8" value="3" data-bind="checked:question8" />3</li>
+<li><input type="radio" name="question8" value="4" data-bind="checked:question8" />4</li>
+<li><input type="radio" name="question8" value="5" data-bind="checked:question8" />5</li>
+</ul>
+<br>
+<span>I think about motivating people.</span>
+<ul>
+<li><input type="radio" name="question9" value="1" data-bind="checked:question9" />1</li>
+<li><input type="radio" name="question9" value="2" data-bind="checked:question9" />2</li>
+<li><input type="radio" name="question9" value="3" data-bind="checked:question9" />3</li>
+<li><input type="radio" name="question9" value="4" data-bind="checked:question9" />4</li>
+<li><input type="radio" name="question9" value="5" data-bind="checked:question9" />5</li>
+</ul>
+<br>
+<span>I am motivated by recognition and approval.</span>
+<ul>
+<li><input type="radio" name="question10" value="1" data-bind="checked:question10" />1</li>
+<li><input type="radio" name="question10" value="2" data-bind="checked:question10" />2</li>
+<li><input type="radio" name="question10" value="3" data-bind="checked:question10" />3</li>
+<li><input type="radio" name="question10" value="4" data-bind="checked:question10" />4</li>
+<li><input type="radio" name="question10" value="5" data-bind="checked:question10" />5</li>
+</ul>
+<hr>
+
+<br>
+<span>I thrive in consistent environments over changing ones. </span>
+<ul>
+<li><input type="radio" name="question11" value="1" data-bind="checked:question11" />1</li>
+<li><input type="radio" name="question11" value="2" data-bind="checked:question11" />2</li>
+<li><input type="radio" name="question11" value="3" data-bind="checked:question11" />3</li>
+<li><input type="radio" name="question11" value="4" data-bind="checked:question11" />4</li>
+<li><input type="radio" name="question11" value="5" data-bind="checked:question11" />5</li>
+</ul>
+<br>
+<span>I prefer specifics over generalizations. </span>
+<ul>
+<li><input type="radio" name="question12" value="1" data-bind="checked:question12" />1</li>
+<li><input type="radio" name="question12" value="2" data-bind="checked:question12" />2</li>
+<li><input type="radio" name="question12" value="3" data-bind="checked:question12" />3</li>
+<li><input type="radio" name="question12" value="4" data-bind="checked:question12" />4</li>
+<li><input type="radio" name="question12" value="5" data-bind="checked:question12" />5</li>
+</ul>
+<br>
+<span>I enjoy small groups of people. </span>
+<ul>
+<li><input type="radio" name="question13" value="1" data-bind="checked:question13" />1</li>
+<li><input type="radio" name="question13" value="2" data-bind="checked:question13" />2</li>
+<li><input type="radio" name="question13" value="3" data-bind="checked:question13" />3</li>
+<li><input type="radio" name="question13" value="4" data-bind="checked:question13" />4</li>
+<li><input type="radio" name="question13" value="5" data-bind="checked:question13" />5</li>
+</ul>
+<br>
+<span>I prefer being a partner of a team over leading the team. </span>
+<ul>
+<li><input type="radio" name="question14" value="1" data-bind="checked:question14" />1</li>
+<li><input type="radio" name="question14" value="2" data-bind="checked:question14" />2</li>
+<li><input type="radio" name="question14" value="3" data-bind="checked:question14" />3</li>
+<li><input type="radio" name="question14" value="4" data-bind="checked:question14" />4</li>
+<li><input type="radio" name="question14" value="5" data-bind="checked:question14" />5</li>
+</ul>
+<br>
+<span>I am motivated by stability and support. </span>
+<ul>
+<li><input type="radio" name="question15" value="1" data-bind="checked:question15" />1</li>
+<li><input type="radio" name="question15" value="2" data-bind="checked:question15" />2</li>
+<li><input type="radio" name="question15" value="3" data-bind="checked:question15" />3</li>
+<li><input type="radio" name="question15" value="4" data-bind="checked:question15" />4</li>
+<li><input type="radio" name="question15" value="5" data-bind="checked:question15" />5</li>
+</ul>
+<hr>
+
+<br>
+<span>I typically do not take big risks. </span>
+<ul>
+<li><input type="radio" name="question16" value="1" data-bind="checked:question16" />1</li>
+<li><input type="radio" name="question16" value="2" data-bind="checked:question16" />2</li>
+<li><input type="radio" name="question16" value="3" data-bind="checked:question16" />3</li>
+<li><input type="radio" name="question16" value="4" data-bind="checked:question16" />4</li>
+<li><input type="radio" name="question16" value="5" data-bind="checked:question16" />5</li>
+</ul>
+<br>
+<span>I love tasks, order and details. </span>
+<ul>
+<li><input type="radio" name="question17" value="1" data-bind="checked:question17" />1</li>
+<li><input type="radio" name="question17" value="2" data-bind="checked:question17" />2</li>
+<li><input type="radio" name="question17" value="3" data-bind="checked:question17" />3</li>
+<li><input type="radio" name="question17" value="4" data-bind="checked:question17" />4</li>
+<li><input type="radio" name="question17" value="5" data-bind="checked:question17" />5</li>
+</ul>
+<br>
+<span>I am right most of the time. </span>
+<ul>
+<li><input type="radio" name="question18" value="1" data-bind="checked:question18" />1</li>
+<li><input type="radio" name="question18" value="2" data-bind="checked:question18" />2</li>
+<li><input type="radio" name="question18" value="3" data-bind="checked:question18" />3</li>
+<li><input type="radio" name="question18" value="4" data-bind="checked:question18" />4</li>
+<li><input type="radio" name="question18" value="5" data-bind="checked:question18" />5</li>
+</ul>
+<br>
+<span>I comply with clearly defined rules. </span>
+<ul>
+<li><input type="radio" name="question19" value="1" data-bind="checked:question19" />1</li>
+<li><input type="radio" name="question19" value="2" data-bind="checked:question19" />2</li>
+<li><input type="radio" name="question19" value="3" data-bind="checked:question19" />3</li>
+<li><input type="radio" name="question19" value="4" data-bind="checked:question19" />4</li>
+<li><input type="radio" name="question19" value="5" data-bind="checked:question19" />5</li>
+</ul>
+<br>
+<span>I am motivated by quality and correctness. </span>
+<ul>
+<li><input type="radio" name="question20" value="1" data-bind="checked:question20" />1</li>
+<li><input type="radio" name="question20" value="2" data-bind="checked:question20" />2</li>
+<li><input type="radio" name="question20" value="3" data-bind="checked:question20" />3</li>
+<li><input type="radio" name="question20" value="4" data-bind="checked:question20" />4</li>
+<li><input type="radio" name="question20" value="5" data-bind="checked:question20" />5</li>
+</ul>
+<hr>
