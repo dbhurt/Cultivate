@@ -1,6 +1,7 @@
 var TestViewModel = function(){
 	var _self = this;
-	_self.message = ko.observable("testmessage");
+	_self.message = ko.observable("bound message test");
+	_self.hideMessage = ko.observable(true);
 	_self.question1 = ko.observable(0);
 	_self.question2 = ko.observable(0);
 	_self.question3 = ko.observable(0);
