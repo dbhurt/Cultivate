@@ -18,20 +18,20 @@ var TestViewModel = function(){
 	
 	_self.First = function(){
 		_self.selectedGroup(1);
-	});
+	};
 	_self.Last = function(){
 		_self.selectedGroup(4);
-	});
+	};
 	_self.Previous = function(){
 		if(_self.selectedGroup() != 1){
 			_self.selectedGroup(_self.selectedGroup() - 1);
 		}
-	});
+	};
 	_self.Next = function(){
 		if(_self.selectedGroup() != 4){
 			_self.selectedGroup(_self.selectedGroup() + 1);
 		}
-	});
+	};
 	
 	_self.hideMessage = ko.observable(true);
 	_self.question1 = ko.observable(0);
