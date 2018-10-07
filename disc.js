@@ -1,6 +1,38 @@
 var TestViewModel = function(){
 	var _self = this;
 	_self.message = ko.observable("bound message test");
+	
+	_self.selectedGroup = ko.observable(1);
+	_self.Group1Selected = ko.pureComputed(function() {
+		return _self.selectedGroup() == 1;
+	}, this);
+	_self.Group2Selected = ko.pureComputed(function() {
+		return _self.selectedGroup() == 2;
+	}, this);
+	_self.Group3Selected = ko.pureComputed(function() {
+		return _self.selectedGroup() == 3;
+	}, this);
+	_self.Group4Selected = ko.pureComputed(function() {
+		return _self.selectedGroup() == 4;
+	}, this);
+	
+	_self.First = function(){
+		_self.selectedGroup(1);
+	});
+	_self.Last = function(){
+		_self.selectedGroup(4);
+	});
+	_self.Previous = function(){
+		if(_self.selectedGroup() != 1){
+			_self.selectedGroup(_self.selectedGroup() - 1);
+		}
+	});
+	_self.Next = function(){
+		if(_self.selectedGroup() != 4){
+			_self.selectedGroup(_self.selectedGroup() + 1);
+		}
+	});
+	
 	_self.hideMessage = ko.observable(true);
 	_self.question1 = ko.observable(0);
 	_self.question2 = ko.observable(0);
