@@ -96,21 +96,21 @@ var TestViewModel = function(){
 	
 	_self.dPercentage = ko.pureComputed(function(){
 		var result = (_self.dResult() / _self.totalPoints()) * 100;
-		return result.toString() + "%";
+		return result.toFixed(0).toString() + "%";
 	},this);
 	
 	_self.iPercentage = ko.pureComputed(function(){
 		var result = (_self.iResult() / _self.totalPoints()) * 100;
-		return result.toString() + "%";
+		return result.toFixed(0).toString() + "%";
 	},this);
 	
 	_self.sPercentage = ko.pureComputed(function(){
 		var result = (_self.sResult() / _self.totalPoints()) * 100;
-		return result.toString() + "%";
+		return result.toFixed(0).toString() + "%";
 	},this);
 	
 	_self.cPercentage = ko.pureComputed(function(){
 		var result = (_self.cResult() / _self.totalPoints()) * 100;
-		return result.toString() + "%";
+		return result.toFixed(0).toString() + "%";
 	},this);
 };
