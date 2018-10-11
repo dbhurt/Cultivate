@@ -16,7 +16,7 @@ var TestViewModel = function(){
 		return _self.selectedGroup() == 4;
 	}, this);
 	_self.EmailSelected = ko.pureComputed(function() {
-		return false;
+		return _self.selectedGroup() == 5;
 	}, this);
 	
 	
@@ -36,7 +36,7 @@ var TestViewModel = function(){
 		}
 	};
 	_self.Next = function(){
-		if(_self.selectedGroup() != 4){
+		if(_self.selectedGroup() != 5){
 			_self.selectedGroup(_self.selectedGroup() + 1);
 		}
 	};
