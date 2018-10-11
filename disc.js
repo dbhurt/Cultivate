@@ -18,6 +18,10 @@ var TestViewModel = function(){
 	_self.EmailSelected = ko.pureComputed(function() {
 		return _self.selectedGroup() == 5;
 	}, this);
+	_self.ShowNav = ko.pureComputed(function() {
+		return _self.selectedGroup() < 5;
+	}, this);
+	
 	
 	
 	_self.OnFirst = ko.pureComputed(function(){
