@@ -15,6 +15,10 @@ var TestViewModel = function(){
 	_self.Group4Selected = ko.pureComputed(function() {
 		return _self.selectedGroup() == 4;
 	}, this);
+	_self.EmailSelected = ko.pureComputed(function() {
+		return false;
+	}, this);
+	
 	
 	_self.First = function(){
 		_self.selectedGroup(1);

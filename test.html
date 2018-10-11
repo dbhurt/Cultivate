@@ -1,6 +1,6 @@
 <link rel="stylesheet" type="text/css" href="http://cultivatechurch.tv/quiz/quiz.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script><script src="http://cultivatechurch.tv/quiz/disc.js"></script><script type="text/javascript">jQuery(document).ready(function($){window.myViewModel = new TestViewModel();jQuery('#wpforms-11890-field_2').attr('data-bind','text:message,visible:hideMessage');ko.applyBindings(window.myViewModel);jQuery('#wpforms-11890-field_2').parent().hide();});</script><div style="display:none;"><span style="display:none;" class="discGroup">D:<span data-bind="text:dPercentage"></span></span><span class="discGroup">I:<span data-bind="text:iPercentage"></span></span><span class="discGroup">S:<span data-bind="text:sPercentage"></span></span><span class="discGroup">C:<span data-bind="text:cPercentage"></span></span>
 <hr></div>
-<div id="group1" class="questiongroup">
+<div id="group1" class="questiongroup" data-bind="visible:Group1Selected">
 <p><span>I am assertive, demanding, and decisive.</span></p>
 <ul>
 <li><input type="radio" name="question1" value="1" data-bind="checked:question1" />1</li>
@@ -48,7 +48,7 @@
 <hr>
 </div>
 
-<div id="group2" class="questiongroup">
+<div id="group2" class="questiongroup" data-bind="visible:Group2Selected">
 <span>I enjoy influencing and inspiring people.</span>
 <ul>
 <li><input type="radio" name="question6" value="1" data-bind="checked:question6" />1</li>
@@ -96,7 +96,7 @@
 <hr>
 </div>
 
-<div id="group3" class="questiongroup">
+<div id="group3" class="questiongroup" data-bind="visible:Group3Selected">
 <span>I thrive in consistent environments over changing ones. </span>
 <ul>
 <li><input type="radio" name="question11" value="1" data-bind="checked:question11" />1</li>
@@ -144,7 +144,7 @@
 <hr>
 </div>
 
-<div id="group4" class="questiongroup">
+<div id="group4" class="questiongroup" data-bind="visible:Group4Selected">
 <span>I typically do not take big risks. </span>
 <ul>
 <li><input type="radio" name="question16" value="1" data-bind="checked:question16" />1</li>
@@ -191,4 +191,6 @@
 </ul>
 <hr>
 </div>
+<div id="email" data-bind="visible:EmailSelected">
 [wpforms id="11890"]
+</div>
