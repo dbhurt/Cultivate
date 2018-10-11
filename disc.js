@@ -65,7 +65,55 @@ var TestViewModel = function(){
 	_self.question18 = ko.observable(0);
 	_self.question19 = ko.observable(0);
 	_self.question20 = ko.observable(0);
+	
+	_self.group1Valid = ko.pureComputed(function() {
+		return _self.question1() > 0 &&
+			_self.question2() > 0 &&
+			_self.question3() > 0 &&
+			_self.question4() > 0 &&
+			_self.question5() > 0;
+	},this);
+	_self.group2Valid = ko.pureComputed(function() {
+		return _self.question6() > 0 &&
+			_self.question7() > 0 &&
+			_self.question8() > 0 &&
+			_self.question9() > 0 &&
+			_self.question10() > 0;
+	},this);
+	_self.group3Valid = ko.pureComputed(function() {
+		return _self.question11() > 0 &&
+			_self.question12() > 0 &&
+			_self.question13() > 0 &&
+			_self.question14() > 0 &&
+			_self.question15() > 0;
+	},this);
+	_self.group4Valid = ko.pureComputed(function() {
+		return _self.question16() > 0 &&
+			_self.question17() > 0 &&
+			_self.question18() > 0 &&
+			_self.question19() > 0 &&
+			_self.question20() > 0;
+	},this);
 
+	_self.NextEnabled = ko.pureComputed(function() {
+		if(_self.selectedGroup() == 1){
+			return _self.group1Valid();
+		}
+		
+		if(_self.selectedGroup() == 2){
+			return _self.group2Valid();
+		}
+		
+		if(_self.selectedGroup() == 3){
+			return _self.group3Valid();
+		}
+		
+		if(_self.selectedGroup() == 4){
+			return _self.group4Valid();
+		}
+		
+		return false;
+	},this);
 	_self.dResult = ko.pureComputed(function() {
 		return Number(_self.question1()) +
 			Number(_self.question2()) +
