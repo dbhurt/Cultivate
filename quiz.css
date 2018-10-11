@@ -2,10 +2,15 @@ div.questiongroup {
 	text-align:center;
 }
 
+div.questiongroup p {
+	padding-bottom:0px !important;
+}
+
 ul {
 	text-align:center;
     list-style-type: none;
     margin: 0;
+	margin-left: 0px !important;
     padding: 0;
     overflow: hidden;
 }
@@ -23,6 +28,8 @@ li a {
     padding: 16px;
     text-decoration: none;
 }
+
+
 
 span.discGroup {
     margin-right: 20px;
