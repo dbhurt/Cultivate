@@ -20,6 +20,10 @@ var TestViewModel = function(){
 	}, this);
 	
 	
+	_self.OnFirst = ko.pureComputed(function(){
+		return _self.selectedGroup() == 1;
+	},this);
+	
 	_self.First = function(){
 		_self.selectedGroup(1);
 	};
