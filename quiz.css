@@ -6,6 +6,10 @@ div.questiongroup p {
 	padding-bottom:0px !important;
 }
 
+div.quiz-nav {
+	text-align:center;
+}
+
 ul {
 	text-align:center;
     list-style-type: none;
