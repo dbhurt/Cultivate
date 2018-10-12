@@ -1,3 +1,8 @@
+var obj = function(type,score){
+	this.type = type;
+	this.score = score;
+};
+
 var TestViewModel = function(){
 	var _self = this;
 	_self.message = ko.observable("bound message test");
@@ -150,27 +155,57 @@ var TestViewModel = function(){
 			Number(_self.question20());
 	}, this);
 	
+	_self.Traits = ko.pureComputed(function(){
+		function compare(a,b) {
+		  if (a.score < b.score)
+			return -1;
+		  if (a.score > b.score)
+			return 1;
+		  return 0;
+		}
+
+		var D = new obj("D",_self.dResult());
+		var I = new obj("I",_self.iResult());
+		var S = new obj("S",_self.sResult());
+		var C = new obj("C",_self.cResult());		
+		
+		var all = [];
+		all.push(D);
+		all.push(I);
+		all.push(S);
+		all.push(C);
+		
+		var result = all.sort(compare);
+		var sendResult = [];
+		sendResult.push(result[3]);
+		sendResult.push(result[2]);
+		
+		return sendResult;
+		
+	}, this);
+	
+	
 	_self.totalPoints = ko.pureComputed(function(){
 		return _self.dResult() + _self.iResult() + _self.sResult() + _self.cResult();
 	}, this);
 	
 	_self.dPercentage = ko.pureComputed(function(){
 		var result = (_self.dResult() / _self.totalPoints()) * 100;
-		return result.toFixed(0).toString() + "%";
+		return result.toFixed(0);
 	},this);
 	
 	_self.iPercentage = ko.pureComputed(function(){
 		var result = (_self.iResult() / _self.totalPoints()) * 100;
-		return result.toFixed(0).toString() + "%";
+		return result.toFixed(0);
 	},this);
 	
 	_self.sPercentage = ko.pureComputed(function(){
 		var result = (_self.sResult() / _self.totalPoints()) * 100;
-		return result.toFixed(0).toString() + "%";
+		return result.toFixed(0);
 	},this);
 	
 	_self.cPercentage = ko.pureComputed(function(){
 		var result = (_self.cResult() / _self.totalPoints()) * 100;
-		return result.toFixed(0).toString() + "%";
+		return result.toFixed(0);
 	},this);
 };
