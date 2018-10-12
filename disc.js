@@ -1,3 +1,19 @@
+
+jQuery.urlParam = function (name) {
+    var results = new RegExp('[\?&]' + name + '=([^&#]*)')
+                      .exec(window.location.search);
+
+    return (results !== null) ? results[1] || 0 : false;
+}
+
+jQuery(document).ready(function(){
+	//var action = jQuery('#wpforms-11890-field_2').attr('action');
+	//jQuery('#wpforms-11890-field_2').attr('action', action + ')
+	var primary = jQuery.urlParam('primary');
+	var secondary = jQuery.urlParam('secondary');
+	alert(primary + ' ' + secondary);
+});
+
 var dominant = function(type){
 	if(type == "D"){
 		return "D's are direct and decisive; they are risk takers and problem solvers. They are more concerned with completing tasks and winning than they are with gaining approval from people. Though the internal drive tends to make them insensitive to those around them, D's are not afraid to challenge the status quo, and they thrive when it comes to developing new things. They need discipline to excel, and they respond to direct confrontation. The greatest fear of a “D” is to be taken advantage of, and even despite their possible weaknesses—which include an aversion to routine, a tendency to overstep authority, an argumentative nature, and a habit of taking on too much—they place a high value on time and use their innovative thinking to accomplish difficult tasks and conquer challenges.";
@@ -245,6 +261,16 @@ var TestViewModel = function(){
 		message = message + personalityType(T1+T2);
 		return message;
 	},this);
+	
+	_self.EmailSelected.subscribe(function(newValue) {
+		if(newValue){
+			var T1 = _self.Traits()[0].type;
+			var T2 = _self.Traits()[1].type;
+			
+			var action = jQuery('#wpforms-form-11890').attr('action')
+			jQuery('#wpforms-form-11890').attr('action', action + '&primary='+T1+'&secondary='+T2);
+		}
+	});
 	
 	
 	_self.totalPoints = ko.pureComputed(function(){
