@@ -6,12 +6,15 @@ jQuery.urlParam = function (name) {
     return (results !== null) ? results[1] || 0 : false;
 }
 
-jQuery(document).ready(function(){
-	//var action = jQuery('#wpforms-11890-field_2').attr('action');
-	//jQuery('#wpforms-11890-field_2').attr('action', action + ')
+jQuery(document).ready(function($){
 	var primary = jQuery.urlParam('primary');
 	var secondary = jQuery.urlParam('secondary');
-	alert(primary + ' ' + secondary);
+	//alert(primary + ' ' + secondary);
+	
+	window.myViewModel = new TestViewModel(primary,secondary);
+	jQuery('#wpforms-11890-field_2').attr('data-bind','value:message,visible:hideMessage');
+	ko.applyBindings(window.myViewModel);
+	jQuery('#wpforms-11890-field_2').parent().hide();
 });
 
 var dominant = function(type){
@@ -66,9 +69,19 @@ var obj = function(type,score){
 	this.score = score;
 };
 
-var TestViewModel = function(){
+var TestViewModel = function(primary,secondary){
 	var _self = this;
-	//_self.message = ko.observable("bound message test");
+	
+	_self.primary = ko.observable();
+	_self.secondary = ko.observable();
+	_self.completed = ko.observable(false);
+	
+	if(primary && secondary){
+		_self.primary(primary);
+		_self.secondary(secondary);
+		_self.completed(true);
+		alert("completed!");
+	}
 	
 	_self.selectedGroup = ko.observable(1);
 	_self.Group1Selected = ko.pureComputed(function() {
