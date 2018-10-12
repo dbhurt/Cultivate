@@ -5,7 +5,7 @@ var obj = function(type,score){
 
 var TestViewModel = function(){
 	var _self = this;
-	_self.message = ko.observable("bound message test");
+	//_self.message = ko.observable("bound message test");
 	
 	_self.selectedGroup = ko.observable(1);
 	_self.Group1Selected = ko.pureComputed(function() {
@@ -183,6 +183,11 @@ var TestViewModel = function(){
 		return sendResult;
 		
 	}, this);
+	
+	_self.message = ko.pureComputed(function(){
+		var mes = _self.Traits()[0].type + _self.Traits()[0].score.toString() + _self.Traits()[1].type + _self.Traits()[1].score.toString();
+		return mes;
+	},this);
 	
 	
 	_self.totalPoints = ko.pureComputed(function(){
