@@ -74,16 +74,27 @@ var TestViewModel = function(primary,secondary){
 	
 	_self.primary = ko.observable();
 	_self.secondary = ko.observable();
+	_self.htmlMessage = ko.observable();
 	_self.completed = ko.observable(false);
+	
+	_self.selectedGroup = ko.observable(1);
 	
 	if(primary && secondary){
 		_self.primary(primary);
 		_self.secondary(secondary);
 		_self.completed(true);
 		_self.selectedGroup(6);
+		var resultMessage = "Your dominant trait is: " + _self.primary() + "!";
+		resultMessage += "<br><br>";
+		resultMessage += dominant(_self.primary());
+		resultMessage += "<br><br>";
+		resultMessage += "Your personality type is: " + _self.primary() + "/" + _self.secondary();
+		resultMessage += "<br><br>";
+		resultMessage += personalityType(_self.primary()+_self.secondary());
+		_self.htmlMessage(resultMessage);
 	}
 	
-	_self.selectedGroup = ko.observable(1);
+	
 	_self.Group1Selected = ko.pureComputed(function() {
 		return _self.selectedGroup() == 1;
 	}, this);

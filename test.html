@@ -192,9 +192,11 @@
 <hr>
 </div>
 <div id="email" data-bind="visible:EmailSelected">
+<span>Your results are ready! Please provide your name and email address to share with us your results and receive a copy yourself!</span>
+<br>
 [wpforms id="11890"]
 </div>
 <div id="results" data-bind="visible:completed">
-<span>RESULTS!</span>
+<p data-bind="html:htmlMessage"></p>
 </div>
 <div class="quiz-nav" data-bind="visible:ShowNav"><span><button data-bind="click:Previous,disable:OnFirst">Previous</button><button data-bind="click:Next,enable:NextEnabled">Next</button></span></div>
