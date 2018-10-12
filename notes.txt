@@ -7,3 +7,7 @@ Spiritual gifts
 javascript
 calculate online
 submit to lambda - can lambda email?
+
+so, adding a new parameter list to the form post stays on the postback. Can that be leveraged?
+can we strip the form and ajax the call?
+if none of the above, move the email to AFTER the results, but they may not submit

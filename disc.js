@@ -15,6 +15,36 @@ var dominant = function(type){
 		return "";
 	}
 }
+
+var personalityType = function(type){
+	if(type == "DI"){
+		return "D/I's are curious concluders who place emphasis on the bottom line and work hard to reach their goals. They are more determined than they are inspirational, yet their high expectations and standards for themselves and those around them typically causes them to make quite an impact, motivating others to follow them. They have an array of interests and can become distracted by taking on too many projects. They often need to focus, prioritize, and simply slow down. Because D/I's thrive on activity and forward motion, they like to accomplish tasks through a large number of people.\\\n\\\nBiblical Examples: Joshua (Joshua 1), Noah (Genesis 6-9), Sarah (Genesis 16, 1 Peter 3:6)";
+	}else if(type == "ID"){
+		return "I/D's are persuaders who are outgoing and energetic. They enjoy large groups and use their power of influence to attain respect and convince people to follow their lead. Sometimes they can be viewed as fidgety and nervous, but it comes from their need to be a part of challenges that have variety, freedom, and mobility. “I/D”s could benefit from learning to look before they leap and spending more time being studious and still. They make inspiring leaders and know how to get results from and through people. \\\n\\\nBiblical Examples: John the Baptist (Luke 3), Peter (Matthew 16 and 26, Acts 3), Rebekah (Genesis 24)";
+	}else if(type=="SD"){
+		return "S/D's are quiet leaders who can be counted on to get the job done. They perform better in small groups and do not enjoy speaking in front of crowds. Though they can be soft- and hard-hearted at the same time, they enjoy close relationships with people, being careful not to dominate them. Challenges motivate them, especially ones that allow them to take a systematic approach. Because this personality style tends to be determined, persevering through time and struggles, they benefit from encouragement and positive relationships. \\\n\\\nBiblical Examples: Martha (Luke 10:38-42), Job (Job 1:5, James 5:11)";
+	}else if(type == "CD"){
+		return "C/D's are cautious and determined designers who are consistently task-oriented and very aware of problems. Sometimes viewed as insensitive, they do care about individual people but have a difficult time showing it. They often feel they are the only ones who can do the job the way it needs to be done, but because of their administrative skills, they are able to bring plans for change and improvements to fruition. “C/D”s have a tendency to be serious and could benefit from being more optimistic and enthusiastic. Despite their natural drive to achieve, they should concentrate on developing healthy relationships and simply loving people. \\\n\\\nBiblical Examples: Bezealeel (Exodus 35:30-36, 8, 37:1-9), Jochebed (Exodus 1:22-2:4), Jethro (Exodus 2,18)";
+	}else if(type=="DS"){
+		return "D/S's are attainers and achievers with an ability to persevere. They are more active than passive, but they possess a kind of calm sensitivity and steadiness that makes them good leaders. They seem to be people oriented but can easily be dominant and decisive when it comes to tasks and project planning. They strive to accomplish goals with fierce determination that comes from strong internal drive, but they could benefit from contemplative and conservative thinking as well as spending more time focusing on relationships. \\\n\\\nBiblical Examples: Daniel (Daniel 1-6), Job (Job 1:5, James 5:11), Martha (Luke 10:38-42)";
+	} else if(type == "IS"){
+		return "I/S's are influential counselors who love people, and it’s no surprise that people love them. They live to please and serve, and they tend to be good listeners. Looking good and encouraging others is important to them, as is following through and being obedient. They often lack in the area of organization and can be more concerned with the people involved than they are with the task at hand. However, they can be center stage or behind the scenes with equal effectiveness, and they shine when it comes to influencing and helping others. \\\n\\\nBiblical Examples: Barnabas (Acts 4, 9, 11-15), Elisha (1 Kings 19, 2 Kings 2-3), Nicodemus (John 3, 7, 19)";
+	} else if(type == "SI"){
+		return "S/I's are inspirational counselors who exhibit warmth and sensitivity. Tolerant and forgiving, they have many friends because they accept and represent others well. Their social nature and desire to be likable and flexible makes them inclined to be overly tolerant and non-confrontational. “S/I”s will benefit from being more task-oriented and paying more attention to detail. Kind and considerate, they include others and inspire them to follow. Words of affirmation go a long way with this personality type, and with the right motivation, they can be excellent team players. \\\n\\\nBiblical Examples: Mary Magdalene (Luke 7:36-47), Barnabas (Acts 4, 9, 11-15), Elisha (1 Kings 19, 2 Kings 2-13)";
+	} else if(type == "CI"){
+		return "C/I's pay attention to the details. They tend to impress others by doing things right and stabilizing situations. Not considered aggressive or pushy, they enjoy both large and small crowds. Though they work well with people, they are sometimes too sensitive to what others think about them and their work. They could benefit from being more assertive and self motivated. Often excellent judges of character, they easily trust those who meet their standards. They are moved by genuine and enthusiastic approval as well as concise and logical explanations. \\\n\\\nBiblical Examples: Miriam (Exodus 15-21, Numbers 12:1-15), Ezra (Ezra 7, 8)";
+	} else if(type == "DC"){
+		return "D/C's are challengers and can either be determined students or defiant critics. Being in charge is important to them, yet they care little about what others think as long as they get the job done. They have a great deal of foresight and examine every avenue to find the best solution; they prefer to work alone. Though they fear failure and the lack of influence, they are motivated by challenges and can often be excellent administrators. They can benefit from learning to relax and paying more attention to people. \\\n\\\nBiblical Examples: Malachi (Malachi 4), Nathan (2 Samuel 12:1-13), Nahum (Nahum 1-3)";
+	}else if(type == "IC"){
+		return "I/C's are inspiring yet cautious assessors who are excellent communicators through the combination of concerned awareness and appreciation of people. They excel in determining ways to improve production. They tend to be impatient and critical, and they can also be overly persuasive and too consumed by the desire to win. “I/C”s like to work inside the box, and they could benefit from trying new things and caring less about what others think. This personality type often possesses a gift for teaching; they are generally dependable when it comes to paying attention to details and getting the job done. \\\n\\\nBiblical Examples: Miriam (Exodus 15-21), Ezra (Ezra 7-8), Shunammite Woman (2 Kings 4:8-37)";
+	}else if(type == "SC"){
+		return "S/C's are diplomatic and steady, as well as detail-oriented. Stable and contemplative, they like to weigh the evidence and discover the facts to come to a logical conclusion. More deliberate, they prefer to take their time, especially when the decision involves others. Possible weaknesses include being highly sensitive and unable to handle criticism, and they also need to be aware of the way they treat others. Operating best in precise and cause-worthy projects, the “S/C” can be a peacemaker; this makes them a loyal team member and friend. \\\n\\\nBiblical Examples: Moses (Exodus 3, 4, 20, 32), John (John 19:26-27), Eliezer (Genesis 24)";
+	}else if(type == "CS"){
+		return "C/S's are systematic and stable. They tend to do one thing at a time—and do it right. Reserved and cautious, they would rather work behind the scenes to stay on track; however, they seldom take risks or try new things and naturally dislike sudden changes in their environments. Precisionists to the letter, they painstakingly require accuracy and fear criticism, which they equate to failure. Diligent workers, their motivation comes from serving others. \\\n\\\nBiblical Examples: Esther (Esther 4), Zechariah (Luke 1), Joseph (Matthew 1:1-23)";
+	}else{
+		return "";
+	}
+}
 var obj = function(type,score){
 	this.type = type;
 	this.score = score;
@@ -205,9 +235,15 @@ var TestViewModel = function(){
 		return "test\ntest1";
 	},this*/
 	_self.message = ko.pureComputed(function(){
+		var message = "";
 		var T1 = _self.Traits()[0].type;
+		var T2 = _self.Traits()[1].type;
 		//var mes = _self.Traits()[0].type + _self.Traits()[0].score.toString() + _self.Traits()[1].type + _self.Traits()[1].score.toString();
-		return "Your dominant trait is: " + T1 + "!\\\n\\\n" + dominant(T1);
+		message = "Your dominant trait is: " + T1 + "!\\\n\\\n" + dominant(T1);
+		message = message + "\\\n\\\n";
+		message = message + "Your personality type is: " + T1 + "/" + T2 + "\\\n\\\n";
+		message = message + personalityType(T1+T2);
+		return message;
 	},this);
 	
 	
