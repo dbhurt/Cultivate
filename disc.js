@@ -80,7 +80,7 @@ var TestViewModel = function(primary,secondary){
 		_self.primary(primary);
 		_self.secondary(secondary);
 		_self.completed(true);
-		alert("completed!");
+		_self.selectedGroup(6);
 	}
 	
 	_self.selectedGroup = ko.observable(1);
