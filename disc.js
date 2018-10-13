@@ -292,7 +292,12 @@ var TestViewModel = function(primary,secondary){
 			var T2 = _self.Traits()[1].type;
 			
 			var action = jQuery('#wpforms-form-11890').attr('action')
-			jQuery('#wpforms-form-11890').attr('action', action + '&primary='+T1+'&secondary='+T2);
+			if(action.indexOf("?") > -1){
+				jQuery('#wpforms-form-11890').attr('action', action + '&primary='+T1+'&secondary='+T2);
+			}else{
+				jQuery('#wpforms-form-11890').attr('action', action + '?primary='+T1+'&secondary='+T2);
+			}
+			
 		}
 	});
 	
