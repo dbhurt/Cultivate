@@ -13,4 +13,5 @@ can we strip the form and ajax the call?
 if none of the above, move the email to AFTER the results, but they may not submit
 
 -change name of page
--change email header/subject
+-styling
+	- border: 1px solid #eee

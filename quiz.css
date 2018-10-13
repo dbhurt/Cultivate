@@ -1,5 +1,9 @@
 div.questiongroup {
 	text-align:center;
+	font-weight:500;
+	font-size:1.4em;
+	line-height:1.5;
+	font-family: 'Comfortaa',display;
 }
 
 div.questiongroup p {
@@ -10,22 +14,26 @@ div.quiz-nav {
 	text-align:center;
 }
 
-ul {
+div.questiongroup ul {
 	text-align:center;
     list-style-type: none;
     margin: 0;
 	margin-left: 0px !important;
     padding: 0;
     overflow: hidden;
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 
-li {
-	display: inline-block;
+div.questiongroup li {
+	display: inline-grid;
 	list-style: none !important;
-	padding-right: 15px;
+	vertical-align:middle;
+	width:50px;
+	padding-right: 65px;
 }
 
-li a {
+div.questiongroup li a {
     display: block;
     color: white;
     text-align: center;
@@ -37,4 +45,87 @@ li a {
 
 span.discGroup {
     margin-right: 20px;
+}
+ul.answers li:last-child{
+	padding-right:0px;
+}
+ul.answers li input[type=radio]{
+	display:none;
+}
+ul.answers li input[type=radio] + label:before {
+    content: '';
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0px 8px 0 8px;
+    vertical-align: middle;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #fff;
+    /*border: 1px solid #888;*/
+    transition: .5s;
+}
+.questiongroup li:first-child input[type=radio] + label:hover:before,
+.questiongroup li:nth-child(n+2) input[type=radio] + label:hover:before {
+      background: #a7200187;
+}
+.questiongroup li:first-child input[type=radio]:checked + label:before,
+.questiongroup li:nth-child(n+2) input[type=radio]:checked + label:before {
+    background: #a72001;
+}
+.questiongroup li:first-child label:before {
+    border: 3px solid #a72001;
+}
+.questiongroup li:nth-child(n+2) label:before {
+    border: 3px solid #a72001;
+    /*width: 35px;
+    height: 35px;*/
+}
+.questiongroup li:nth-child(n+3) input[type=radio] + label:hover:before {
+    background: #db61289c;
+}
+.questiongroup li:nth-child(n+3) input[type=radio]:checked + label:before {
+    background: #db6128;
+}
+.questiongroup li:nth-child(n+3) label:before {
+    border: 3px solid #db6128;
+    /*width: 30px;
+    height: 30px;*/
+}
+.questiongroup li:nth-child(n+4) input[type=radio] + label:hover:before,
+.questiongroup li:nth-child(n+5) input[type=radio] + label:hover:before {
+    background: #678d3e7a;
+}
+.questiongroup li:nth-child(n+4) input[type=radio]:checked + label:before,
+.questiongroup li:nth-child(n+5) input[type=radio]:checked + label:before {
+    background: #678d3e;
+}
+.questiongroup li:nth-child(n+4) label:before {
+    border: 3px solid #678d3e;
+    /*width: 35px;
+    height: 35px;*/
+}
+.questiongroup li:nth-child(n+5) label:before {
+    border: 3px solid #678d3e;
+    /*width: 40px;
+    height: 40px;*/
+}
+
+button.nextButton {
+	background-color: #8cc63e;
+	color: #fff;
+	border-width:2px;
+	border-color:#8cc63e !important;
+	border-radius:3px;
+	font-family:'inherit',sans-serif;
+	font-size:18px;
+	letter-spacing:0px;
+	width:275px;
+	height:50px;
+}
+
+button.nextButton:disabled{
+	background-color: #fff;
+	color: #8cc63e !important;
+	border-color:#8cc63e !important;
 }
