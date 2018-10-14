@@ -386,7 +386,32 @@ var GiftsViewModel = function(){
 			   _self.question72();
 	});
 	
-	
+	_self.GiftsList = ko.observableArray([
+		{ name: "Administration", score: _self.Administration() },
+		{ name: "Apostleship", score: _self.Apostleship() },
+		{ name: "Craftsmanship", score: _self.Craftsmanship() },
+		{ name: "Discernment", score: _self.Discernment() },
+		{ name: "Evangelism", score: _self.Evangelism() },
+		{ name: "Exhortation", score: _self.Exhortation() },
+		{ name: "Faith", score: _self.Faith() },
+		{ name: "Giving", score: _self.Giving() },
+		{ name: "Healing", score: _self.Healing() },
+		{ name: "Helps", score: _self.Helps() },
+		{ name: "Hospitality", score: _self.Hospitality() },
+		{ name: "Intercession", score: _self.Intercession() },
+		{ name: "Knowledge", score: _self.Knowledge() },
+		{ name: "Leadership", score: _self.Leadership() },
+		{ name: "Mercy", score: _self.Mercy() },
+		{ name: "Miracles", score: _self.Miracles() },
+		{ name: "Missionary", score: _self.Missionary() },
+		{ name: "MusicWorship", score: _self.MusicWorship() },
+		{ name: "PastorShepherd", score: _self.PastorShepherd() },
+		{ name: "Prophecy", score: _self.Prophecy() },
+		{ name: "Service", score: _self.Service() },
+		{ name: "Teaching", score: _self.Teaching() },
+		{ name: "Tongues", score: _self.Tongues() },
+		{ name: "Wisdom", score: _self.Wisdom() }
+	]);
 	
 	
 	_self.group1Valid = ko.pureComputed(function() {
