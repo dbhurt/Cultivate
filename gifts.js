@@ -387,14 +387,14 @@ var GiftsViewModel = function(){
 	});
 	
 	_self.GiftsList = ko.observableArray([
-		{ name: "Administration", score: _self.Administration() },
-		{ name: "Apostleship", score: _self.Apostleship() },
-		{ name: "Craftsmanship", score: _self.Craftsmanship() },
-		{ name: "Discernment", score: _self.Discernment() },
-		{ name: "Evangelism", score: _self.Evangelism() },
-		{ name: "Exhortation", score: _self.Exhortation() },
-		{ name: "Faith", score: _self.Faith() },
-		{ name: "Giving", score: _self.Giving() },
+		{ name: "Administration", score: _self.Administration(), info: "The gift of administration is the divine strength or ability to organize multiple tasks and groups of people to accomplish these tasks. Luke 14:28-30, Acts 6:1-7, 1 Corinthians 12:28" },
+		{ name: "Apostleship", score: _self.Apostleship(), info: "The gift of apostleship is the divine strength or ability to pioneer new churches and ministries through planting, overseeing, and training. Acts 15:22-35, 1 Corinthians 12:28, 2 Corinthians 12:12, Gal 2:7-10, Ephesians 4:11-14" },
+		{ name: "Craftsmanship", score: _self.Craftsmanship(), info: "The gift of craftsmanship is the divine strength or ability to plan, build, and work with your hands in construction environments to accomplish multiple ministry applications. Exodus 30:22, 31:3-11, 2 Chronicles 34:9-13, Acts 18:2-3"},
+		{ name: "Discernment", score: _self.Discernment(), info: "The gift of discernment is the divine strength or ability to spiritually identify falsehood and to distinguish between right and wrong motives and situations. Matt. 16:21-23, Acts 5:1-11, 16:16-18, I Cor. 12:10, I John 4:1-6" },
+		{ name: "Evangelism", score: _self.Evangelism(), info: "The gift of evangelism is the divine strength or ability to help non-Christians take the necessary steps to becoming a born again Christian. Acts 8:5-6, Acts 8:26-40, Acts 14:21, Acts 21:8, Ephesians 4:11-14" },
+		{ name: "Exhortation", score: _self.Exhortation(), info: "The gift of exhortation is the divine strength or ability to encourage others through the written or spoken word and Biblical truth. Acts 14:22, Romans 12:8, 1 Timothy 4:13, Hebrews 10:24-25" },
+		{ name: "Faith", score: _self.Faith(), info: "The gift of faith is the divine strength or ability to believe in God for unseen supernatural results in every arena of life. Acts 11:22-24, Rom 4:18-21, 1 Corinthians 12:9, Hebrews 11" },
+		{ name: "Giving", score: _self.Giving(), info: "The gift of giving is the divine strength or ability to produce wealth and to give by tithes and offerings for the purpose of advancing the Kingdom of God on earth. Mark 12:41-44, Romans 12:8, 2 Corinthians 8:1-7, 9:2-7" },
 		{ name: "Healing", score: _self.Healing() },
 		{ name: "Helps", score: _self.Helps() },
 		{ name: "Hospitality", score: _self.Hospitality() },
