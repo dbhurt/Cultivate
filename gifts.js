@@ -484,6 +484,9 @@ var GiftsViewModel = function(){
 		
 	}, this);*/
 	
+	self.message = ko.pureComputed(function(){
+		return "";
+	});
 	/*_self.message = ko.pureComputed(function(){
 		return "test\ntest1";
 	},this*/
