@@ -265,6 +265,93 @@ var GiftsViewModel = function(){
 	_self.question71 = ko.observable(0);
 	_self.question72 = ko.observable(0);
 	
+	_self.Administration = ko.pureComputed(function(){
+		return _self.question1() +
+			   _self.question25() +
+			   _self.question49();
+	});
+	_self.Apostleship = ko.pureComputed(function(){
+		return _self.question2() +
+			   _self.question26() +
+			   _self.question50();
+	});
+	_self.Craftsmanship = ko.pureComputed(function(){
+		return _self.question3() +
+			   _self.question27() +
+			   _self.question51();
+	});
+	_self.Discernment = ko.pureComputed(function(){
+		return _self.question4() +
+			   _self.question28() +
+			   _self.question52();
+	});
+	_self.Evangelism = ko.pureComputed(function(){
+		return _self.question5() +
+			   _self.question29() +
+			   _self.question53();
+	});
+	_self.Exhortation = ko.pureComputed(function(){
+		return _self.question6() +
+			   _self.question30() +
+			   _self.question54();
+	});
+	_self.Faith = ko.pureComputed(function(){
+		return _self.question7() +
+			   _self.question31() +
+			   _self.question55();
+	});
+	_self.Giving = ko.pureComputed(function(){
+		return _self.question8() +
+			   _self.question32() +
+			   _self.question56();
+	});
+	_self.Healing = ko.pureComputed(function(){
+		return _self.question9() +
+			   _self.question33() +
+			   _self.question57();
+	});
+	_self.Helps = ko.pureComputed(function(){
+		return _self.question10() +
+			   _self.question34() +
+			   _self.question58();
+	});
+	_self.Hospitality = ko.pureComputed(function(){
+		return _self.question11() +
+			   _self.question35() +
+			   _self.question59();
+	});
+	_self.Intercession = ko.pureComputed(function(){
+		return _self.question12() +
+			   _self.question36() +
+			   _self.question60();
+	});
+	_self.Knowledge = ko.pureComputed(function(){
+		return _self.question13() +
+			   _self.question37() +
+			   _self.question61();
+	});
+	_self.Leadership = ko.pureComputed(function(){
+		return _self.question14() +
+			   _self.question38() +
+			   _self.question62();
+	});
+	_self.Mercy = ko.pureComputed(function(){
+		return _self.question15() +
+			   _self.question39() +
+			   _self.question63();
+	});
+	_self.Miracles = ko.pureComputed(function(){
+		return _self.question16() +
+			   _self.question40() +
+			   _self.question64();
+	});
+	_self.Missionary = ko.pureComputed(function(){
+		return _self.question17() +
+			   _self.question41() +
+			   _self.question65();
+	});
+	
+	
 	
 	
 	_self.group1Valid = ko.pureComputed(function() {
