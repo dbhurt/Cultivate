@@ -350,6 +350,41 @@ var GiftsViewModel = function(){
 			   _self.question41() +
 			   _self.question65();
 	});
+	_self.MusicWorship = ko.pureComputed(function(){
+		return _self.question18() +
+			   _self.question42() +
+			   _self.question66();
+	});
+	_self.PastorShepherd = ko.pureComputed(function(){
+		return _self.question19() +
+			   _self.question43() +
+			   _self.question67();
+	});
+	_self.Prophecy = ko.pureComputed(function(){
+		return _self.question20() +
+			   _self.question44() +
+			   _self.question68();
+	});
+	_self.Service = ko.pureComputed(function(){
+		return _self.question21() +
+			   _self.question45() +
+			   _self.question69();
+	});
+	_self.Teaching = ko.pureComputed(function(){
+		return _self.question22() +
+			   _self.question46() +
+			   _self.question70();
+	});
+	_self.Tongues = ko.pureComputed(function(){
+		return _self.question23() +
+			   _self.question47() +
+			   _self.question71();
+	});
+	_self.Wisdom = ko.pureComputed(function(){
+		return _self.question24() +
+			   _self.question48() +
+			   _self.question72();
+	});
 	
 	
 	
