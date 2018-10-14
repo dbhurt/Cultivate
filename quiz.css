@@ -129,3 +129,7 @@ button.nextButton:disabled{
 	color: #8cc63e !important;
 	border-color:#8cc63e !important;
 }
+
+div#results p{
+	font-family: 'Comfortaa',display;
+}

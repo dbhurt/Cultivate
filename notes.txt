@@ -15,3 +15,11 @@ if none of the above, move the email to AFTER the results, but they may not subm
 -change name of page
 -styling
 	- border: 1px solid #eee
+
+DISC
+	-maybe have them be asked what is their strongest if two or more are equal scores
+
+-gifts:
+	- top two, but could be 3 or 4 or more that are the highest
+	- need AT least 2
+	- go ahead and show the spectrum of result
