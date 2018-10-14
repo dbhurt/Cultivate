@@ -23,3 +23,13 @@ DISC
 	- top two, but could be 3 or 4 or more that are the highest
 	- need AT least 2
 	- go ahead and show the spectrum of result
+
+
+	
+-gifts	
+	- get email ready
+	- calculate all the gifts
+	- input all the gifts
+	- sort the gifts
+	- get results ready
+	- progress bar
