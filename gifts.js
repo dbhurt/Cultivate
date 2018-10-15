@@ -269,6 +269,7 @@ var GiftsViewModel = function(testing){
 	_self.question72 = ko.observable(0);
 	
 	if(testing){
+	_self.completed(true);
 	_self.question1("1");
 	_self.question2("1");
 	_self.question3("1");
@@ -434,49 +435,49 @@ var GiftsViewModel = function(testing){
 			   Number(_self.question63());
 	});
 	_self.Miracles = ko.pureComputed(function(){
-		return Number(_self.question16() +
-			   Number(_self.question40() +
-			   Number(_self.question64();
+		return Number(_self.question16()) +
+			   Number(_self.question40()) +
+			   Number(_self.question64());
 	});
 	_self.Missionary = ko.pureComputed(function(){
-		return Number(_self.question17() +
-			   Number(_self.question41() +
-			   Number(_self.question65();
+		return Number(_self.question17()) +
+			   Number(_self.question41()) +
+			   Number(_self.question65());
 	});
 	_self.MusicWorship = ko.pureComputed(function(){
-		return Number(_self.question18() +
-			   Number(_self.question42() +
-			   Number(_self.question66();
+		return Number(_self.question18()) +
+			   Number(_self.question42()) +
+			   Number(_self.question66());
 	});
 	_self.PastorShepherd = ko.pureComputed(function(){
-		return Number(_self.question19() +
-			   Number(_self.question43() +
-			   Number(_self.question67();
+		return Number(_self.question19()) +
+			   Number(_self.question43()) +
+			   Number(_self.question67());
 	});
 	_self.Prophecy = ko.pureComputed(function(){
-		return Number(_self.question20() +
-			   Number(_self.question44() +
-			   Number(_self.question68();
+		return Number(_self.question20()) +
+			   Number(_self.question44()) +
+			   Number(_self.question68());
 	});
 	_self.Service = ko.pureComputed(function(){
-		return Number(_self.question21() +
-			   Number(_self.question45() +
-			   Number(_self.question69();
+		return Number(_self.question21()) +
+			   Number(_self.question45()) +
+			   Number(_self.question69());
 	});
 	_self.Teaching = ko.pureComputed(function(){
-		return Number(_self.question22() +
-			   Number(_self.question46() +
-			   Number(_self.question70();
+		return Number(_self.question22()) +
+			   Number(_self.question46()) +
+			   Number(_self.question70());
 	});
 	_self.Tongues = ko.pureComputed(function(){
-		return Number(_self.question23() +
-			   Number(_self.question47() +
-			   Number(_self.question71();
+		return Number(_self.question23()) +
+			   Number(_self.question47()) +
+			   Number(_self.question71());
 	});
 	_self.Wisdom = ko.pureComputed(function(){
-		return Number(_self.question24() +
-			   Number(_self.question48() +
-			   Number(_self.question72();
+		return Number(_self.question24()) +
+			   Number(_self.question48()) +
+			   Number(_self.question72());
 	});
 	
 	_self.GiftsList = ko.observableArray([
@@ -660,6 +661,9 @@ var GiftsViewModel = function(testing){
 		if(_self.selectedGroup() == 15){
 			return _self.group15Valid();
 		}
+		if(_self.selectedGroup() == 16){
+			return true;
+		};
 		
 		return false;
 	},this);
