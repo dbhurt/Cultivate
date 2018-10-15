@@ -1,17 +1,20 @@
 
-/*jQuery.urlParam = function (name) {
+jQuery.urlParam = function (name) {
     var results = new RegExp('[\?&]' + name + '=([^&#]*)')
                       .exec(window.location.search);
 
     return (results !== null) ? results[1] || 0 : false;
-}*/
+}
 
 jQuery(document).ready(function($){
 	//var primary = jQuery.urlParam('primary');
 	//var secondary = jQuery.urlParam('secondary');
 	//alert(primary + ' ' + secondary);
 	
-	window.myViewModel = new GiftsViewModel();
+	var testing = jQuery.urlParam('test');
+	
+	
+	window.myViewModel = new GiftsViewModel(testing);
 	jQuery('#wpforms-11923-field_2').attr('data-bind','value:message,visible:hideMessage');
 	ko.applyBindings(window.myViewModel);
 	//jQuery('#wpforms-11923-field_2').parent().hide();
@@ -71,7 +74,7 @@ jQuery(document).ready(function($){
 	this.score = score;
 };*/
 
-var GiftsViewModel = function(){
+var GiftsViewModel = function(testing){
 	var _self = this;
 	
 	//_self.primary = ko.observable();
@@ -265,125 +268,215 @@ var GiftsViewModel = function(){
 	_self.question71 = ko.observable(0);
 	_self.question72 = ko.observable(0);
 	
+	if(testing){
+	_self.question1("1");
+	_self.question2("1");
+	_self.question3("1");
+	_self.question4("1");
+	_self.question5("1");
+
+	_self.question6("1");
+	_self.question7("1");
+	_self.question8("1");
+	_self.question9("1");
+	_self.question10("1");
+
+	_self.question11("1");
+	_self.question12("1");
+	_self.question13("1");
+	_self.question14("1");
+	_self.question15("1");
+
+	_self.question16("1");
+	_self.question17("1");
+	_self.question18("1");
+	_self.question19("1");
+	_self.question20("1");
+	
+	_self.question21("1");
+	_self.question22("1");
+	_self.question23("1");
+	_self.question24("1");
+	_self.question25("1");
+	
+	_self.question26("1");
+	_self.question27("1");
+	_self.question28("1");
+	_self.question29("1");
+	_self.question30("1");
+	
+	_self.question31("1");
+	_self.question32("1");
+	_self.question33("1");
+	_self.question34("1");
+	_self.question35("1");
+	
+	_self.question36("1");
+	_self.question37("1");
+	_self.question38("1");
+	_self.question39("1");
+	_self.question40("1");
+	
+	_self.question41("1");
+	_self.question42("1");
+	_self.question43("1");
+	_self.question44("1");
+	_self.question45("1");
+	
+	_self.question46("1");
+	_self.question47("1");
+	_self.question48("1");
+	_self.question49("1");
+	_self.question50("1");
+	
+	_self.question51("1");
+	_self.question52("1");
+	_self.question53("1");
+	_self.question54("1");
+	_self.question55("1");
+	
+	_self.question56("1");
+	_self.question57("1");
+	_self.question58("1");
+	_self.question59("1");
+	_self.question60("1");
+	
+		
+	_self.question61("1");
+	_self.question62("1");
+	_self.question63("1");
+	_self.question64("1");
+	_self.question65("1");
+	
+	_self.question66("1");
+	_self.question67("1");
+	_self.question68("1");
+	_self.question69("1");
+	_self.question70("1");
+	
+	_self.question71("1");
+	_self.question72("1");
+	}
+	
 	_self.Administration = ko.pureComputed(function(){
-		return _self.question1() +
-			   _self.question25() +
-			   _self.question49();
+		return Number(_self.question1()) +
+			   Number(_self.question25()) +
+			   Number(_self.question49());
 	});
 	_self.Apostleship = ko.pureComputed(function(){
-		return _self.question2() +
-			   _self.question26() +
-			   _self.question50();
+		return Number(_self.question2()) +
+			   Number(_self.question26()) +
+			   Number(_self.question50());
 	});
 	_self.Craftsmanship = ko.pureComputed(function(){
-		return _self.question3() +
-			   _self.question27() +
-			   _self.question51();
+		return Number(_self.question3()) +
+			   Number(_self.question27()) +
+			   Number(_self.question51());
 	});
 	_self.Discernment = ko.pureComputed(function(){
-		return _self.question4() +
-			   _self.question28() +
-			   _self.question52();
+		return Number(_self.question4()) +
+			   Number(_self.question28()) +
+			   Number(_self.question52());
 	});
 	_self.Evangelism = ko.pureComputed(function(){
-		return _self.question5() +
-			   _self.question29() +
-			   _self.question53();
+		return Number(_self.question5()) +
+			   Number(_self.question29()) +
+			   Number(_self.question53());
 	});
 	_self.Exhortation = ko.pureComputed(function(){
-		return _self.question6() +
-			   _self.question30() +
-			   _self.question54();
+		return Number(_self.question6()) +
+			   Number(_self.question30()) +
+			   Number(_self.question54());
 	});
 	_self.Faith = ko.pureComputed(function(){
-		return _self.question7() +
-			   _self.question31() +
-			   _self.question55();
+		return Number(_self.question7()) +
+			   Number(_self.question31()) +
+			   Number(_self.question55());
 	});
 	_self.Giving = ko.pureComputed(function(){
-		return _self.question8() +
-			   _self.question32() +
-			   _self.question56();
+		return Number(_self.question8()) +
+			   Number(_self.question32()) +
+			   Number(_self.question56());
 	});
 	_self.Healing = ko.pureComputed(function(){
-		return _self.question9() +
-			   _self.question33() +
-			   _self.question57();
+		return Number(_self.question9()) +
+			   Number(_self.question33()) +
+			   Number(_self.question57());
 	});
 	_self.Helps = ko.pureComputed(function(){
-		return _self.question10() +
-			   _self.question34() +
-			   _self.question58();
+		return Number(_self.question10()) +
+			   Number(_self.question34()) +
+			   Number(_self.question58());
 	});
 	_self.Hospitality = ko.pureComputed(function(){
-		return _self.question11() +
-			   _self.question35() +
-			   _self.question59();
+		return Number(_self.question11()) +
+			   Number(_self.question35()) +
+			   Number(_self.question59());
 	});
 	_self.Intercession = ko.pureComputed(function(){
-		return _self.question12() +
-			   _self.question36() +
-			   _self.question60();
+		return Number(_self.question12()) +
+			   Number(_self.question36()) +
+			   Number(_self.question60());
 	});
 	_self.Knowledge = ko.pureComputed(function(){
-		return _self.question13() +
-			   _self.question37() +
-			   _self.question61();
+		return Number(_self.question13()) +
+			   Number(_self.question37()) +
+			   Number(_self.question61());
 	});
 	_self.Leadership = ko.pureComputed(function(){
-		return _self.question14() +
-			   _self.question38() +
-			   _self.question62();
+		return Number(_self.question14()) +
+			   Number(_self.question38()) +
+			   Number(_self.question62());
 	});
 	_self.Mercy = ko.pureComputed(function(){
-		return _self.question15() +
-			   _self.question39() +
-			   _self.question63();
+		return Number(_self.question15()) +
+			   Number(_self.question39()) +
+			   Number(_self.question63());
 	});
 	_self.Miracles = ko.pureComputed(function(){
-		return _self.question16() +
-			   _self.question40() +
-			   _self.question64();
+		return Number(_self.question16() +
+			   Number(_self.question40() +
+			   Number(_self.question64();
 	});
 	_self.Missionary = ko.pureComputed(function(){
-		return _self.question17() +
-			   _self.question41() +
-			   _self.question65();
+		return Number(_self.question17() +
+			   Number(_self.question41() +
+			   Number(_self.question65();
 	});
 	_self.MusicWorship = ko.pureComputed(function(){
-		return _self.question18() +
-			   _self.question42() +
-			   _self.question66();
+		return Number(_self.question18() +
+			   Number(_self.question42() +
+			   Number(_self.question66();
 	});
 	_self.PastorShepherd = ko.pureComputed(function(){
-		return _self.question19() +
-			   _self.question43() +
-			   _self.question67();
+		return Number(_self.question19() +
+			   Number(_self.question43() +
+			   Number(_self.question67();
 	});
 	_self.Prophecy = ko.pureComputed(function(){
-		return _self.question20() +
-			   _self.question44() +
-			   _self.question68();
+		return Number(_self.question20() +
+			   Number(_self.question44() +
+			   Number(_self.question68();
 	});
 	_self.Service = ko.pureComputed(function(){
-		return _self.question21() +
-			   _self.question45() +
-			   _self.question69();
+		return Number(_self.question21() +
+			   Number(_self.question45() +
+			   Number(_self.question69();
 	});
 	_self.Teaching = ko.pureComputed(function(){
-		return _self.question22() +
-			   _self.question46() +
-			   _self.question70();
+		return Number(_self.question22() +
+			   Number(_self.question46() +
+			   Number(_self.question70();
 	});
 	_self.Tongues = ko.pureComputed(function(){
-		return _self.question23() +
-			   _self.question47() +
-			   _self.question71();
+		return Number(_self.question23() +
+			   Number(_self.question47() +
+			   Number(_self.question71();
 	});
 	_self.Wisdom = ko.pureComputed(function(){
-		return _self.question24() +
-			   _self.question48() +
-			   _self.question72();
+		return Number(_self.question24() +
+			   Number(_self.question48() +
+			   Number(_self.question72();
 	});
 	
 	_self.GiftsList = ko.observableArray([
@@ -395,22 +488,22 @@ var GiftsViewModel = function(){
 		{ name: "Exhortation", score: _self.Exhortation(), info: "The gift of exhortation is the divine strength or ability to encourage others through the written or spoken word and Biblical truth. Acts 14:22, Romans 12:8, 1 Timothy 4:13, Hebrews 10:24-25" },
 		{ name: "Faith", score: _self.Faith(), info: "The gift of faith is the divine strength or ability to believe in God for unseen supernatural results in every arena of life. Acts 11:22-24, Rom 4:18-21, 1 Corinthians 12:9, Hebrews 11" },
 		{ name: "Giving", score: _self.Giving(), info: "The gift of giving is the divine strength or ability to produce wealth and to give by tithes and offerings for the purpose of advancing the Kingdom of God on earth. Mark 12:41-44, Romans 12:8, 2 Corinthians 8:1-7, 9:2-7" },
-		{ name: "Healing", score: _self.Healing(), info: "" },
-		{ name: "Helps", score: _self.Helps(), info: "" },
-		{ name: "Hospitality", score: _self.Hospitality(), info: "" },
-		{ name: "Intercession", score: _self.Intercession(), info: "" },
-		{ name: "Knowledge", score: _self.Knowledge(), info: "" },
-		{ name: "Leadership", score: _self.Leadership(), info: "" },
-		{ name: "Mercy", score: _self.Mercy(), info: "" },
-		{ name: "Miracles", score: _self.Miracles(), info: "" },
-		{ name: "Missionary", score: _self.Missionary(), info: "" },
-		{ name: "MusicWorship", score: _self.MusicWorship(), info: "" },
-		{ name: "PastorShepherd", score: _self.PastorShepherd(), info: "" },
-		{ name: "Prophecy", score: _self.Prophecy(), info: "" },
-		{ name: "Service", score: _self.Service(), info: "" },
-		{ name: "Teaching", score: _self.Teaching(), info: "" },
-		{ name: "Tongues", score: _self.Tongues(), info: "" },
-		{ name: "Wisdom", score: _self.Wisdom(), info: "" }
+		{ name: "Healing", score: _self.Healing(), info: "The gift of healing is the divine strength or ability to act as an intermediary in faith,prayer, & by the laying on of hands for the healing of physical and mental illnesses. Acts 3:1-10, Acts 9:32-35, Acts 28:7-10, 1 Corinthians 12:9, 28" },
+		{ name: "Helps", score: _self.Helps(), info: "The gift of helps is the divine strength or ability to work in a supportive role for the accomplishment of tasks in Christian ministry. Mark 15:40-41, Acts 9:36, Romans 16:1-2, 1 Corinthians 12:28" },
+		{ name: "Hospitality", score: _self.Hospitality(), info: "The gift of hospitality is the divine strength or ability to create warm, welcoming environments for others in places such as your home, office, or church. Acts 16:14-15, Romans 12:13, Romans 16:23, Hebrews 13:1-2, 1 Peter 4:9" },
+		{ name: "Intercession", score: _self.Intercession(), info: "The gift of intercession is the divine strength or ability to stand in the gap in prayer for someone, something, or someplace believing for profound results. Hebrews 7:25, Colossians 1:9-12, Col 4:12-13, James 5:14-16" },
+		{ name: "Knowledge", score: _self.Knowledge(), info: "The gift of knowledge is the divine strength or ability to bring clarity and to understand situations and circumstances often accompanied by a word from God. Acts 5:1-11, 1 Corinthians 12:8, Col 2:2-3" },
+		{ name: "Leadership", score: _self.Leadership(), info: "The gift of leadership is the divine strength or ability to influence people at their level while directing and focusing them on the big picture, vision, or idea. Romans 12:8, 1 Timothy 3:1-13, 1 Timothy 5:17, Hebrews 13:17" },
+		{ name: "Mercy", score: _self.Mercy(), info: "The gift of mercy is the divine strength or ability to feel empathy and to care for those who are hurting in any way. Matthew 9:35-36, Mark 9:41, Romans 12:8, 1 Thessalonians 5:14" },
+		{ name: "Miracles", score: _self.Miracles(), info: "The gift of miracles is the divine strength or ability to alter the natural outcomes of life in a supernatural way through prayer, faith, and divine direction. Acts 9:36-42, 19:11-12, 20:7-12, Rom 15:18-19, I Cor. 12:10, 28" },
+		{ name: "Missionary", score: _self.Missionary(), info: "The gift of missions is the divine strength or ability to reach others outside of your culture and nationality; while in most cases living in that culture or nation. Acts 8:4, Acts 13:2-3, Acts 22:21, Romans 10:15" },
+		{ name: "MusicWorship", score: _self.MusicWorship(), info: "The gift of music / worship is the divine strength or ability to sing, dance, or play an instrument primarily for the purpose of helping others worship God. Deut. 31:22, 1 Samuel 16:16, 1 Chronicles 16:41-42, 2 Chronicles 5:12-13, 34:12, Psalm 150" },
+		{ name: "PastorShepherd", score: _self.PastorShepherd(), info: "The gift of pastor / shepherd is the divine strength or ability to care for the personal needs of others by nurturing and mending life issues. John 10:1-18, Ephesians 4:11-14, 1 Timothy 3:1-7, 1 Peter 5:1-3" },
+		{ name: "Prophecy", score: _self.Prophecy(), info: "The gift of prophecy is the divine strength or ability to boldly speak and bring clarity to scriptural and doctrinal truth, in some cases foretelling God’s plan. Acts 2:37-40, Acts 7:51-53, Acts 26:24-29, 1 Corinthians 14:1-4, 1 Thessalonians. 1:5" },
+		{ name: "Service", score: _self.Service(), info: "The gift of serving is the divine strength or ability to do small or great tasks in working for the overall good of the body of Christ. Acts 6:1-7, Romans 12:7, Galatians 6:10, 2 Tim. 1:16-18, Titus 3:14" },
+		{ name: "Teaching", score: _self.Teaching(), info: "The gift of teaching is the divine strength or ability to study and learn from the Scriptures primarily to bring understanding and depth to other Christians. Acts 18:24-28, Acts 20:20-21, 1 Corinthians. 12:28, Ephesians 4:11-14" },
+		{ name: "Tongues", score: _self.Tongues(), info: "The gift of tongues is the divine strength or ability to pray in a heavenly language to encourage your spirit and to commune with God. The gift of tongues is often accompanied by interpretation and should be used appropriately. Acts 2:1-13, 1 Corinthians 12:10, 14:1-14" },
+		{ name: "Wisdom", score: _self.Wisdom(), info: "The gift of wisdom is the divine strength or ability to apply the truths of Scripture in a practical way, producing the fruitful outcome and character of Jesus Christ. Acts 6:3,10, 1 Corinthians 2:6-13, 1 Corinthians. 12:8" }
 	]);
 	
 	
