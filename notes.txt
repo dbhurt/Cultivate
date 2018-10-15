@@ -35,8 +35,5 @@ DISC
 	- progress bar
 	
 	https://www.w3schools.com/howto/howto_js_accordion.asp
-	-update font family for button
-	-update font for the button
-	-round out the corners
 	-sort the elements
 	-get the colors right
