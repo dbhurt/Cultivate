@@ -33,3 +33,5 @@ DISC
 	- sort the gifts
 	- get results ready
 	- progress bar
+	
+	https://www.w3schools.com/howto/howto_js_accordion.asp
