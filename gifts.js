@@ -211,6 +211,7 @@ var GiftsViewModel = function(testing){
 		}
 	};*/
 	_self.Next = function(){
+		_self.SortGifts();
 		if(_self.selectedGroup() != 17){
 			_self.selectedGroup(_self.selectedGroup() + 1);
 		}
@@ -544,7 +545,23 @@ var GiftsViewModel = function(testing){
 		new Gift("Wisdom", _self.Wisdom, "The gift of wisdom is the divine strength or ability to apply the truths of Scripture in a practical way, producing the fruitful outcome and character of Jesus Christ. Acts 6:3,10, 1 Corinthians 2:6-13, 1 Corinthians. 12:8")
 	]);
 	
-	
+	_self.SortGifts = function(){
+		_self.GiftsList.sort(function (l, r) 
+		{ 
+			if(l.score() > r.score()){
+				return -1;
+			}
+			
+			if(l.score() == r.score()){
+				if(l.name < r.name){
+					return -1;
+				}
+			}
+			
+			return 1;
+			//return l.score() > r.score() ? 1 : -1 
+		});
+	};
 	_self.group1Valid = ko.pureComputed(function() {
 		return _self.question1() > 0 &&
 			_self.question2() > 0 &&
