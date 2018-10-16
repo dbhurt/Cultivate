@@ -28,12 +28,7 @@ DISC
 	
 -gifts	
 	- get email ready
-	- calculate all the gifts
-	- input all the gifts
-	- sort the gifts
 	- get results ready
-	- progress bar
+	- progress bars
 	
 	https://www.w3schools.com/howto/howto_js_accordion.asp
-	-sort the elements
-	-get the colors right
