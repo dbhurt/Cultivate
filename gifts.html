@@ -685,5 +685,5 @@
 <br>
 [wpforms id="11923"]
 </div>
-<div id="results" data-bind="visible:completed"><div data-bind="foreach:GiftsList"><button class="accordion" data-bind="text:name + ' - ' + score"></button><div class="panel"><p data-bind="text:info">Lorem ipsum...</p></div></div></div>
+<div id="results" data-bind="visible:completed"><div data-bind="foreach:GiftsList"><button class="accordion" data-bind="text:name + ' : ' + score(),css: statusClass"></button><div class="panel"><p data-bind="text:info">Lorem ipsum...</p></div></div></div>
 <div class="quiz-nav" data-bind="visible:ShowNav"><span><button class="nextButton" data-bind="click:Next,enable:NextEnabled">Next</button></span></div>

@@ -153,9 +153,9 @@ div#results p{
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
+/*.active, .accordion:hover {
     background-color: #ccc;
-}
+}*/
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
@@ -170,4 +170,23 @@ div#results p{
 .panel p{
 	padding-bottom:3px;
 	padding-top:3px;
+}
+
+.green {
+	background-color: #009900; /*30*/
+}
+.green:hover{
+	background-color: #4dff4d; /*65*/
+}
+.yellow {
+	background-color: #ffff00;
+}
+.yellow:hover{
+	background-color: #ffff66;
+}
+.red{
+	background-color: #ff0000;
+}
+.red:hover{
+	background-color: #ff4d4d;
 }
