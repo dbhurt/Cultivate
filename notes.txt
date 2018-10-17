@@ -22,8 +22,9 @@ DISC
 
 	
 -gifts	
-	- get email ready
-	- get results ready
+
+	- hide the email body of the page and remove the 'Next' button from email page
+	- get results ready after navigation
 	- tie breaker on personality test
 	
 	https://www.w3schools.com/howto/howto_js_accordion.asp

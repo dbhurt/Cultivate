@@ -34,7 +34,7 @@ jQuery(document).ready(function($){
 	window.myViewModel = new GiftsViewModel(testing);
 	jQuery('#wpforms-11923-field_2').attr('data-bind','value:message,visible:hideMessage');
 	ko.applyBindings(window.myViewModel);
-	//jQuery('#wpforms-11923-field_2').parent().hide();
+	jQuery('#wpforms-11923-field_2').parent().hide();
 	//for the accordion results below - these could be put in to KO bindings
 	var acc = document.getElementsByClassName("accordion");
 	var i;
@@ -199,7 +199,7 @@ var GiftsViewModel = function(testing){
 		return _self.selectedGroup() == 16;
 	}, this);
 	_self.ShowNav = ko.pureComputed(function() {
-		return _self.selectedGroup() < 17;
+		return _self.selectedGroup() < 16;
 	}, this);
 	
 	
@@ -730,69 +730,16 @@ var GiftsViewModel = function(testing){
 		
 		return false;
 	},this);
-	/*_self.dResult = ko.pureComputed(function() {
-		return Number(_self.question1()) +
-			Number(_self.question2()) +
-			Number(_self.question3()) +
-			Number(_self.question4()) +
-			Number(_self.question5());
-	}, this);
-
-	_self.iResult = ko.pureComputed(function() {
-		return Number(_self.question6()) +
-			Number(_self.question7()) +
-			Number(_self.question8()) +
-			Number(_self.question9()) +
-			Number(_self.question10());
-	}, this);
-
-	_self.sResult = ko.pureComputed(function() {
-		return Number(_self.question11()) +
-			Number(_self.question12()) +
-			Number(_self.question13()) +
-			Number(_self.question14()) +
-			Number(_self.question15());
-	}, this);
-
-	_self.cResult = ko.pureComputed(function() {
-		return Number(_self.question16()) +
-			Number(_self.question17()) +
-			Number(_self.question18()) +
-			Number(_self.question19()) +
-			Number(_self.question20());
-	}, this);*/
 	
-	/*_self.Traits = ko.pureComputed(function(){
-		function compare(a,b) {
-		  if (a.score < b.score)
-			return -1;
-		  if (a.score > b.score)
-			return 1;
-		  return 0;
+	_self.message = ko.pureComputed(function(){
+		var body = "Here are your spiritual gifts results!\\\n\\\n";
+		
+		for(var x = 0; x < _self.GiftsList().length; x++){
+			body += _self.GiftsList()[x].name + ":" + _self.GiftsList()[x].score() + "\\\n";
+			body += _self.GiftsList()[x].info + "\\\n\\\n";
 		}
-
-		var D = new obj("D",_self.dResult());
-		var I = new obj("I",_self.iResult());
-		var S = new obj("S",_self.sResult());
-		var C = new obj("C",_self.cResult());		
 		
-		var all = [];
-		all.push(D);
-		all.push(I);
-		all.push(S);
-		all.push(C);
-		
-		var result = all.sort(compare);
-		var sendResult = [];
-		sendResult.push(result[3]);
-		sendResult.push(result[2]);
-		
-		return sendResult;
-		
-	}, this);*/
-	
-	self.message = ko.pureComputed(function(){
-		return "";
+		return body;
 	});
 	/*_self.message = ko.pureComputed(function(){
 		return "test\ntest1";
@@ -811,43 +758,50 @@ var GiftsViewModel = function(testing){
 		return message;
 	},this);*/
 	
-	/*_self.EmailSelected.subscribe(function(newValue) {
+	_self.EmailSelected.subscribe(function(newValue) {
 		if(newValue){
-			var T1 = _self.Traits()[0].type;
-			var T2 = _self.Traits()[1].type;
+			var a = _self.Administration();
+			var b = _self.Apostleship();
+			var c = _self.Craftsmanship();
+			var d = _self.Discernment();
+			var e = _self.Evangelism();
+			var f = _self.Exhortation();
+			var g = _self.Faith();
+			var h = _self.Giving();
+			var i = _self.Healing();
+			var j = _self.Helps();
+			var k = _self.Hospitality();
+			var l = _self.Intercession();
+			var m = _self.Knowledge();
+			var n = _self.Leadership();
+			var o = _self.Mercy();
+			var p = _self.Miracles();
+			var q = _self.Missionary();
+			var r = _self.MusicWorship();
+			var s = _self.PastorShepherd();
+			var t = _self.Prophecy();
+			var u = _self.Service();
+			var v = _self.Teaching();
+			var w = _self.Tongues();
+			var x = _self.Wisdom();
+			
+			var querystring = "A="+a+"&B="+b+"&C="+c+"&D="+d+"&";
+				querystring +="E="+e+"&F="+f+"&G="+g+"&H="+h+"&";
+				querystring +="I="+i+"&J="+j+"&K="+k+"&L="+l+"&";
+				querystring +="M="+m+"&N="+n+"&O="+o+"&P="+p+"&";
+				querystring +="Q="+q+"&R="+r+"&S="+s+"&T="+t+"&";
+				querystring +="U="+u+"&V="+v+"&W="+w+"&X="+x;
+			
 			
 			var action = jQuery('#wpforms-form-11923').attr('action')
 			if(action.indexOf("?") > -1){
-				jQuery('#wpforms-form-11923').attr('action', action + '&primary='+T1+'&secondary='+T2);
+				jQuery('#wpforms-form-11923').attr('action', action + '&' + querystring);
 			}else{
-				jQuery('#wpforms-form-11923').attr('action', action + '?primary='+T1+'&secondary='+T2);
+				jQuery('#wpforms-form-11923').attr('action', action + '?' + querystring);
 			}
 			
 		}
-	});*/
+	});
 	
-	
-	/*_self.totalPoints = ko.pureComputed(function(){
-		return _self.dResult() + _self.iResult() + _self.sResult() + _self.cResult();
-	}, this);
-	
-	_self.dPercentage = ko.pureComputed(function(){
-		var result = (_self.dResult() / _self.totalPoints()) * 100;
-		return result.toFixed(0);
-	},this);
-	
-	_self.iPercentage = ko.pureComputed(function(){
-		var result = (_self.iResult() / _self.totalPoints()) * 100;
-		return result.toFixed(0);
-	},this);
-	
-	_self.sPercentage = ko.pureComputed(function(){
-		var result = (_self.sResult() / _self.totalPoints()) * 100;
-		return result.toFixed(0);
-	},this);
-	
-	_self.cPercentage = ko.pureComputed(function(){
-		var result = (_self.cResult() / _self.totalPoints()) * 100;
-		return result.toFixed(0);
-	},this);*/
+
 };
