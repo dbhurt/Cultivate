@@ -30,5 +30,6 @@ DISC
 	- get email ready
 	- get results ready
 	- progress bars
+	- tie breaker on personality test
 	
 	https://www.w3schools.com/howto/howto_js_accordion.asp

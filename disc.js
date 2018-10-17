@@ -79,6 +79,28 @@ var TestViewModel = function(primary,secondary){
 	
 	_self.selectedGroup = ko.observable(1);
 	
+	_self.progress = ko.pureComputed(function(){
+		if(_self.selectedGroup() == 1){
+			return '0%';
+		}
+		
+		if(_self.selectedGroup() == 2){
+			return '25%';
+		}
+		
+		if(_self.selectedGroup() == 3){
+			return '50%';
+		}
+		
+		if(_self.selectedGroup() == 4){
+			return '75%';
+		}
+		
+		if(_self.selectedGroup() == 5){
+			return '100%';
+		}
+	});
+	
 	if(primary && secondary){
 		_self.primary(primary);
 		_self.secondary(secondary);

@@ -35,7 +35,7 @@ jQuery(document).ready(function($){
 	jQuery('#wpforms-11923-field_2').attr('data-bind','value:message,visible:hideMessage');
 	ko.applyBindings(window.myViewModel);
 	//jQuery('#wpforms-11923-field_2').parent().hide();
-	//for the accordion results below
+	//for the accordion results below - these could be put in to KO bindings
 	var acc = document.getElementsByClassName("accordion");
 	var i;
 

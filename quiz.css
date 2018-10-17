@@ -190,3 +190,19 @@ div#results p{
 .red:hover{
 	background-color: #ff4d4d;
 }
+.progressContainer{
+	text-align:center;
+}
+.progressBar{
+	display:inline-block;
+	border: 1px solid #ccc !important;
+	border-radius:5px;
+	width: 75%;
+	height: 15px;
+}
+
+.progress{
+	background-color:#8cc63e !important;
+	height:14px;
+	border-radius:5px;
+}
