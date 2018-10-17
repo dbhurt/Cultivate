@@ -23,8 +23,6 @@ DISC
 	
 -gifts	
 
-	- hide the email body of the page and remove the 'Next' button from email page
-	- get results ready after navigation
-	- tie breaker on personality test
+	- tie breaker on personality test, if top two things are tied, have them pick between the two
 	
 	https://www.w3schools.com/howto/howto_js_accordion.asp

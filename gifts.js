@@ -24,14 +24,36 @@ jQuery.urlParam = function (name) {
 }
 
 jQuery(document).ready(function($){
-	//var primary = jQuery.urlParam('primary');
-	//var secondary = jQuery.urlParam('secondary');
-	//alert(primary + ' ' + secondary);
+	
+	var a = jQuery.urlParam('A');
+	var b = jQuery.urlParam('B');
+	var c = jQuery.urlParam('C');
+	var d = jQuery.urlParam('D');
+	var e = jQuery.urlParam('E');
+	var f = jQuery.urlParam('F');
+	var g = jQuery.urlParam('G');
+	var h = jQuery.urlParam('H');
+	var i = jQuery.urlParam('I');
+	var j = jQuery.urlParam('J');
+	var k = jQuery.urlParam('K');
+	var l = jQuery.urlParam('L');
+	var m = jQuery.urlParam('M');
+	var n = jQuery.urlParam('N');
+	var o = jQuery.urlParam('O');
+	var p = jQuery.urlParam('P');
+	var q = jQuery.urlParam('Q');
+	var r = jQuery.urlParam('R');
+	var s = jQuery.urlParam('S');
+	var t = jQuery.urlParam('T');
+	var u = jQuery.urlParam('U');
+	var v = jQuery.urlParam('V');
+	var w = jQuery.urlParam('W');
+	var x = jQuery.urlParam('X');
 	
 	var testing = jQuery.urlParam('test');
 	
 	
-	window.myViewModel = new GiftsViewModel(testing);
+	window.myViewModel = new GiftsViewModel(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x);
 	jQuery('#wpforms-11923-field_2').attr('data-bind','value:message,visible:hideMessage');
 	ko.applyBindings(window.myViewModel);
 	jQuery('#wpforms-11923-field_2').parent().hide();
@@ -111,11 +133,9 @@ jQuery(document).ready(function($){
 	this.score = score;
 };*/
 
-var GiftsViewModel = function(testing){
+var GiftsViewModel = function(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x){
 	var _self = this;
-	
-	//_self.primary = ko.observable();
-	//_self.secondary = ko.observable();
+
 	_self.htmlMessage = ko.observable();
 	_self.completed = ko.observable(false);
 	
@@ -130,6 +150,8 @@ var GiftsViewModel = function(testing){
 		}
 	});
 	
+		
+
 	/*if(primary && secondary){
 		_self.primary(primary);
 		_self.secondary(secondary);
@@ -315,96 +337,9 @@ var GiftsViewModel = function(testing){
 	_self.question71 = ko.observable(0);
 	_self.question72 = ko.observable(0);
 	
-	if(testing){
-	_self.completed(true);
-	_self.question1("1");
-	_self.question2("1");
-	_self.question3("1");
-	_self.question4("1");
-	_self.question5("1");
 
-	_self.question6("1");
-	_self.question7("1");
-	_self.question8("1");
-	_self.question9("1");
-	_self.question10("1");
-
-	_self.question11("1");
-	_self.question12("1");
-	_self.question13("1");
-	_self.question14("1");
-	_self.question15("1");
-
-	_self.question16("1");
-	_self.question17("1");
-	_self.question18("1");
-	_self.question19("1");
-	_self.question20("1");
 	
-	_self.question21("1");
-	_self.question22("1");
-	_self.question23("1");
-	_self.question24("1");
-	_self.question25("1");
 	
-	_self.question26("1");
-	_self.question27("1");
-	_self.question28("1");
-	_self.question29("1");
-	_self.question30("1");
-	
-	_self.question31("1");
-	_self.question32("1");
-	_self.question33("1");
-	_self.question34("1");
-	_self.question35("1");
-	
-	_self.question36("1");
-	_self.question37("1");
-	_self.question38("1");
-	_self.question39("1");
-	_self.question40("1");
-	
-	_self.question41("1");
-	_self.question42("1");
-	_self.question43("1");
-	_self.question44("1");
-	_self.question45("1");
-	
-	_self.question46("1");
-	_self.question47("1");
-	_self.question48("1");
-	_self.question49("1");
-	_self.question50("1");
-	
-	_self.question51("1");
-	_self.question52("1");
-	_self.question53("1");
-	_self.question54("1");
-	_self.question55("1");
-	
-	_self.question56("1");
-	_self.question57("1");
-	_self.question58("1");
-	_self.question59("1");
-	_self.question60("1");
-	
-		
-	_self.question61("1");
-	_self.question62("1");
-	_self.question63("1");
-	_self.question64("1");
-	_self.question65("1");
-	
-	_self.question66("1");
-	_self.question67("1");
-	_self.question68("1");
-	_self.question69("1");
-	_self.question70("1");
-	
-	_self.question71("1");
-	_self.question72("1");
-	}
 	
 	_self.Administration = ko.pureComputed(function(){
 		return Number(_self.question1()) +
@@ -571,6 +506,38 @@ var GiftsViewModel = function(testing){
 			//return l.score() > r.score() ? 1 : -1 
 		});
 	};
+	
+		//if a exists, assume the others do
+	if(a){
+		_self.completed(true);
+		_self.selectedGroup(17);
+		_self.question1(a);
+		_self.question2(b);
+		_self.question3(c);
+		_self.question4(d);
+		_self.question5(e);
+		_self.question6(f);
+		_self.question7(g);
+		_self.question8(h);
+		_self.question9(i);
+		_self.question10(j);
+		_self.question11(k);
+		_self.question12(l);
+		_self.question13(m);
+		_self.question14(n);
+		_self.question15(o);
+		_self.question16(p);
+		_self.question17(q);
+		_self.question18(r);
+		_self.question19(s);
+		_self.question20(t);
+		_self.question21(u);
+		_self.question22(v);
+		_self.question23(w);
+		_self.question24(x);
+		_self.SortGifts();
+	}
+	
 	_self.group1Valid = ko.pureComputed(function() {
 		return _self.question1() > 0 &&
 			_self.question2() > 0 &&
