@@ -121,6 +121,15 @@ var GiftsViewModel = function(testing){
 	
 	_self.selectedGroup = ko.observable(1);
 	
+	_self.progress = ko.pureComputed(function(){
+		if(_self.selectedGroup() < 16){
+			var result = 6 * (_self.selectedGroup()-1);
+			return result.toString() + "%";
+		}else{
+			return '100%';
+		}
+	});
+	
 	/*if(primary && secondary){
 		_self.primary(primary);
 		_self.secondary(secondary);
