@@ -161,6 +161,7 @@ var TestViewModel = function(primary,secondary){
 		if(_self.selectedGroup() != 5){
 			_self.selectedGroup(_self.selectedGroup() + 1);
 		}
+		window.scrollTo(0,0);
 	};
 	
 	_self.hideMessage = ko.observable(true);

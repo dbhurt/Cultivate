@@ -246,6 +246,7 @@ var GiftsViewModel = function(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x){
 		if(_self.selectedGroup() != 17){
 			_self.selectedGroup(_self.selectedGroup() + 1);
 		}
+		window.scrollTo(0,0);
 	};
 	
 	_self.hideMessage = ko.observable(true);
