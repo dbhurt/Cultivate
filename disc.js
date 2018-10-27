@@ -101,6 +101,10 @@ var TestViewModel = function(primary,secondary){
 		}
 	});
 	
+	_self.progressText = ko.pureComputed(function(){
+		return _self.progress() + " complete"		
+	});
+	
 	if(primary && secondary){
 		_self.primary(primary);
 		_self.secondary(secondary);
