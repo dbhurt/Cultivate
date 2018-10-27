@@ -24,7 +24,6 @@ DISC
 -gifts	
 
 	- tie breaker on personality test, if top two things are tied, have them pick between the two
-	- put percentage in the progress bar
 	- link, "Continue to step 2 Spiritual Gifts"
 	- change the color on the spiritual gifts results to all cultivate green
 	- something to explain the results better
