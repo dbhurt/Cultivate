@@ -3,17 +3,17 @@ var Gift = function(name, score, info){
 	_self.name = name || "";
 	_self.score = score;
 	_self.info = info;
-	_self.statusClass = ko.pureComputed(function(){
-		if(_self.score() <= 15 && _self.score() >10){
-			return 'green';
-		}
-		
-		if(_self.score() <= 10 && _self.score() > 5){
-			return 'yellow';
-		}
-		
-		return 'red';
-	});
+	//_self.statusClass = ko.pureComputed(function(){
+	//	if(_self.score() <= 15 && _self.score() >10){
+	//		return 'green';
+	//	}
+	//	
+	//	if(_self.score() <= 10 && _self.score() > 5){
+	//		return 'yellow';
+	//	}
+	//	
+	//	return 'red';
+	//});
 };
 
 jQuery.urlParam = function (name) {

@@ -177,6 +177,12 @@ div#results p{
 	padding-top:3px;
 }
 
+.cultivategreen{
+	background-color: #8cc63e;
+}
+.cultivategreen:hover{
+	background-color: #a9ef4a;
+}
 .green {
 	background-color: #009900; /*30*/
 }
