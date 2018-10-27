@@ -25,8 +25,7 @@ DISC
 
 	- tie breaker on personality test, if top two things are tied, have them pick between the two
 	- link, "Continue to step 2 Spiritual Gifts"
-	- change the color on the spiritual gifts results to all cultivate green
-	- something to explain the results better
+	- something to explain the results better?
 	- placeholder link for the spiritual gifts to go somewhere
 	
 	https://www.w3schools.com/howto/howto_js_accordion.asp
